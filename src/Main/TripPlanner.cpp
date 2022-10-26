@@ -1,8 +1,11 @@
 #include <iostream>
 #include <unistd.h>
+#include "GPS.hpp"
 
 #define TRUE 1
 #define FALSE 0
+
+
 
 #if (_POSIX_C_SOURCE >= 2 || _XOPEN_SOURCE)
 // brute force shortest path between points
@@ -42,7 +45,8 @@ int main(int argc, char *argv[])
             std::cout << "\n";
         }
     }
-
+ net_dudhit_cpp::GPS loc; 
+ loc.displayGPS();
     return 0;
 
     // find_first_of()   find()  substr()
